@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Students";
+}
+
+@model List<Student>
+
+<div class="text-center">
+    <h1 class="display-4">Students</h1>
+    <br />
+    <table class=" table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Picture
+                </th>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var student in Model)
+                {
+                    <tr>
+                        <td>
+                            <div>
+                                <img src="/images/default-student-image.jpg" alt="Profile Picture" class="mini-picture" height="30" width="30"/>
+                            </div>
+                        </td>
+                        <td>
+                            @student.FirstName
+                        </td>
+                        <td>
+                            @student.LastName
+                        </td>
+                        <td>
+                            @student.EnrollmentDate
+                        </td>
+                        <td>
+                            <a asp-action="CreateStudents">Edit Class Grade</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "CreateStudents";
+}
+
+@model SDMS.Models.Student;
+
+<div class="text-center">
+    <h1 class="display-4">Student Register</h1>
+
+    <div class="row justify-content-center">
+        <form asp-controller="Home" asp-action="CreateStudentForm" class="col-md-6" enctype="multipart/form-data">
+            <!-- File input for student picture -->
+            <div class="text-center">
+                <img id="imagePreview" src="/images/default-student-image.jpg" height="200" alt="Student Picture Preview" class="img-thumbnail" width="200" />
+            </div>
+
+            <!-- Upload Student Picture -->
+            <div class="form-group mt-3">
+                <label for="studentPicture">Upload Student Picture</label>
+                <input class="form-control-file" type="file" id="studentPicture" name="StudentPicture" accept="image/*" onchange="previewImage(event)">
+            </div>
+
+            <!-- Input fields -->
+            <div class="form-group">
+                <label class="mt-3">First Name</label>
+                <input class="form-control w-50 mx-auto" type="text" placeholder="your first name" asp-for="FirstName" />
+            </div>
+
+            <div class="form-group">
+                <label class="mt-3">Last Name</label>
+                <input class="form-control w-50 mx-auto" type="text" placeholder="your last name" asp-for="LastName" />
+            </div>
+
+            <div>
+                <button class="btn btn-primary mt-4" type="submit">Save Student</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var output = document.getElementById('imagePreview');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
