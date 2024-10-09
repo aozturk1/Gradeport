@@ -1,0 +1,77 @@
+# Ignore build outputs
+bin/
+obj/
+out/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vscode/
+
+# Mono auto generated files
+mono_crash.*
+
+# ASP.NET Scaffolding
+.scaffolding/
+
+# Backup & Log files
+*.log
+*.bak
+*.swp
+*.tmp
+
+# Include if you have a database like SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Visual Studio specific
+.vs/
+.vscode/
+*.pdb
+*.mdb
+*.opendb
+*.aps
+*.ncb
+*.sdf
+*.opensdf
+*.sln.docstates
+
+# Package files
+*.nupkg
+*.snupkg
+
+# NuGet
+*.nuget
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Entity Framework
+Migrations/
+
+# Rider files
+.idea/
+.idea/*
+.idea_modules/
+*.iml
+.gradle/
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+Desktop.ini
+
+# JetBrains Rider
+.idea/
+.idea/*
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
