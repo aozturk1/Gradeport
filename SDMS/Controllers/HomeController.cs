@@ -28,18 +28,40 @@ namespace SDMS.Controllers
 
         public IActionResult Students()
         {
-            var allStudents = _dbContext.Studnets.ToList();
+            var allStudents = _dbContext.Students.ToList();
             return View(allStudents);
         }
 
-        public IActionResult CreateStudents() 
+        public IActionResult DeleteStudent(int id) 
         {
+            var studentInDb = _dbContext.Students.SingleOrDefault(s => s.Id == id);
+            _dbContext.Students.Remove(studentInDb);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Students");
+        }
+
+        public IActionResult CreateStudents(int? id) 
+        {
+            if(id != null) 
+            {
+                //edit
+                var studentInDb = _dbContext.Students.SingleOrDefault(s => s.Id == id);
+                return View(studentInDb);
+            }
             return View();
         }
 
         public IActionResult CreateStudentForm(Student model)
         {
-            _dbContext.Studnets.Add(model);
+            if(model.Id == 0)
+            {
+                _dbContext.Students.Add(model);
+            } 
+            else
+            {
+                _dbContext.Students.Update(model);
+            }
+            
             _dbContext.SaveChanges();
 
             return RedirectToAction("Students");

@@ -20,6 +20,9 @@
                     Last Name
                 </th>
                 <th>
+                    Grade
+                </th>
+                <th>
                     Actions
                 </th>
             </tr>
@@ -44,7 +47,10 @@
                             @student.EnrollmentDate
                         </td>
                         <td>
-                            <a asp-action="CreateStudents">Edit Class Grade</a>
+                            <a class="btn btn-secondary" asp-route-id="@student.Id" asp-action="CreateStudents">Edit Class Grade</a>
+                            <a class="btn btn-danger" asp-route-id="@student.Id" asp-action="DeleteStudent"> 
+                                <i class="bi bi-trash"></i> Delete
+                            </a>
                         </td>
                     </tr>
                 }

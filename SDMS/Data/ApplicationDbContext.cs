@@ -7,7 +7,7 @@ namespace SDMS.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
-        public DbSet<Student> Studnets { get; set; }
+        public DbSet<Student> Students { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -24,6 +24,7 @@ namespace SDMS.Data
 
         public DbSet<Course> Courses { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
+        public object Studnets { get; internal set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
