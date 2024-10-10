@@ -6,4 +6,4 @@ Gradeport is a grade and attendance portal for teachers and students to efficien
 
 -Read
 <br/>
-![image](https://github.com/user-attachments/assets/cccc4677-fb9e-4d6e-922d-4e98e52640cc)
+![Screenshot 2024-10-09 225335](https://github.com/user-attachments/assets/d81f7247-b4fc-41b1-bcee-16b147b32f1e)
