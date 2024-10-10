@@ -8,6 +8,9 @@ namespace SDMS.Data
     public class ApplicationDbContext : IdentityDbContext
     {
         public DbSet<Student> Students { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        //public DbSet<>
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -21,10 +24,6 @@ namespace SDMS.Data
                 .Property(x => x.EnrollmentDate)
                 .HasDefaultValueSql("GETDATE()"); // Set default value for EnrollmentDate
         }
-
-        public DbSet<Course> Courses { get; set; }
-        public DbSet<Enrollment> Enrollments { get; set; }
-        public object Studnets { get; internal set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

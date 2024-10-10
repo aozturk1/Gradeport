@@ -13,22 +13,6 @@ a.navbar-brand {
   word-break: break-all;
 }
 
-.bg-secondary {
-    background-color: var(--secondary-color);
-}
-
-.bg-tertiary {
-    background-color: var(--tertiary-color);
-}
-
-.text-secondary {
-    color: var(--secondary-color);
-}
-
-.text-tertiary {
-    color: var(--tertiary-color);
-}
-
 a {
   color: #0077cc;
 }
@@ -37,12 +21,6 @@ a {
     color: #fff;
     background-color: #4b8fcc;
     border-color: #4b8fcb;
-}
-
-.btn-secondary {
-    color: #fff;
-    background-color: #203b72;
-    border-color: #1d3b76;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
