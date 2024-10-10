@@ -20,3 +20,8 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.attendance-checkbox {
+    transform: scale(2);
+    margin-top: 12px;
+}
